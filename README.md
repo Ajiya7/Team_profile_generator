@@ -12,6 +12,9 @@
 
 ## Description
 
+This is a project that uses command line imput (CLI) application to run in Node that takes in input from the user about members of a team and generates a Html file displaying the information about the employees
+
+Running the app, you will be first asked to enter the team manager’s name, employee ID, email address, and office number and after that then the user is presented with three options whether to add an engineer or an intern or to finish building the team. If the finish building the team has been selected then a html file will be generated and each employee will have a custom card on the html file showing their information. This can be seen below in the [Screenshot](#screenshot) section and a demo video of the app running can be seen in the [Video demo](#video-demo) section
 
 ## User Story
 
