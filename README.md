@@ -56,4 +56,6 @@ THEN I exit the application, and the HTML is generated
 
 ### Anyone Can Contribute
 
+### Link to my github: https://github.com/Ajiya7
 ### Link to repo: https://github.com/Ajiya7/Team_profile_generator 
+### link to deployed app: 

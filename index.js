@@ -67,7 +67,6 @@ const addManager = () => {
         const manager = new Manager (name, id, email, officeNumber)
         team.push(manager);
         console.log(manager);
-        addEmployee()
     })
 }
 
@@ -91,7 +90,7 @@ const addEmployee = () => {
                 addIntern();
                 break;
             case "No, my team is complete":
-                compileTeam();
+                completeteam();
                 break;
         }
     })
@@ -225,14 +224,19 @@ const addIntern = () => {
     })
 }
 
-// function  {
-//     fs.writeFile('',  , (err) =>
-//     err ? console.error(err) : console.log('html completed'))
-// }
+const completeteam = data =>{
+    fs.writeFile('./dist/index.html',data, (err) =>
+    err ? console.error(err) : console.log('html completed'))
+}
 
-// // initializing the application
-// function init() {
-// 
-// }
-// // Function call to initialize app
-// init();
+addManager()
+  .then(addEmployee)
+  .then(team => {
+    return template(team);
+  })
+  .then(pageHTML => {
+    return completeteam(pageHTML);
+  })
+  .catch(err => {
+ console.log(err);
+  });

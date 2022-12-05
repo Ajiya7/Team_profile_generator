@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    height: 100px;
+}
+
+.navbar-brand {
+    font-size: 50px;
+}
+
+
+.card-header {
+    background-color:black;
+    color: white;
+}
+
+.card-body {
+    background-color: grey;
+    color: black;
+}
+
+.container {
+    margin: auto;
+    justify-content: space-evenly;
+    display: flex;
+}
