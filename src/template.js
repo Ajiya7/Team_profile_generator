@@ -60,7 +60,7 @@ const generateEngineercard = function (Engineer) {
         <div class="card-body">
             <p class="id">ID: ${Engineer.id}</p>
             <p class="email">Email: ${Engineer.email}
-            <p class="github">Github: ${Manager.github}</p>
+            <p class="github">Github: ${Engineer.github}</p>
         </div>
     </div>
 </div>`;

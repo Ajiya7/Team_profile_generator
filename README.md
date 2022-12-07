@@ -47,9 +47,10 @@ THEN I exit the application, and the HTML is generated
 ```
 
 ## Screenshot
+![App Screenshot](./assets/images/team%20profilegenerator%20screenshot.png)
 
 ## Video demo
-
+link to video: [Video link](https://drive.google.com/file/d/1WCW2K8crHaNQp2swHeJHMZan7xCHupNR/view)
 ## Contact Me
 - Instagram: _ajiya
 - Email: Ajiyafaruk@gmail.com

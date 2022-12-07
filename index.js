@@ -74,13 +74,12 @@ const addManager = async () => {
       const manager = new Manager(name, id, email, officeNumber);
       team.push(manager);
       console.log(manager);
-      switch (addemployee) {
-        case "Engineer":
-          await addEngineer();
-        case "Intern":
-          await addIntern();
-        case "team is complete":
-          await completeteam();
+      if (addemployee === "Engineer") {
+        await addEngineer()
+      } else if (addemployee === "Intern") {
+        await addIntern()
+      } else{
+        completeteam()
       }
     });
 };
@@ -152,13 +151,12 @@ const addEngineer = async () => {
       const engineer = new Engineer(name, id, email, github);
       team.push(engineer);
       console.log(engineer);
-      switch (addemployee) {
-        case "Engineer":
-          await addEngineer();
-        case "Intern":
-          await addIntern();
-        case "team is complete":
-          await completeteam();
+      if (addemployee === "Engineer") {
+        await addEngineer()
+      } else if (addemployee === "Intern") {
+        await addIntern()
+      } else{
+        completeteam()
       }
     });
 };
@@ -230,14 +228,14 @@ const addIntern = async () => {
       const intern = new Intern(name, id, email, school);
       team.push(intern);
       console.log(intern);
-      switch (addemployee) {
-        case "Engineer":
-          await addEngineer();
-        case "Intern":
-          await addIntern();
-        case "team is complete":
-          await completeteam();
+      if (addemployee === "Engineer") {
+        await addEngineer()
+      } else if (addemployee === "Intern") {
+        await addIntern()
+      } else{
+        completeteam()
       }
+      //}
     });
 };
 
@@ -252,8 +250,7 @@ addManager()
   .then((res) => {
     return generateHTML(team);
   })
-  .then((pageHTML) => {
-  })
+  .then((pageHTML) => {})
   .catch((err) => {
     console.log(err);
   });
