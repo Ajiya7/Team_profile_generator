@@ -59,4 +59,3 @@ link to video: [Video link](https://drive.google.com/file/d/1WCW2K8crHaNQp2swHeJ
 
 ### Link to my github: https://github.com/Ajiya7
 ### Link to repo: https://github.com/Ajiya7/Team_profile_generator 
-### link to deployed app: 
