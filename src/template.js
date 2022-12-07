@@ -1,5 +1,5 @@
-const HTML = function(htmldata) {
-    return`
+const HTML = function (htmldata) {
+  return `
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -11,7 +11,7 @@ const HTML = function(htmldata) {
           rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         />
-        <link rel="stylesheet" href="./dist/css/style.css" />
+        <link rel="stylesheet" href="./css/style.css" />
     </head>
     <body>
         <header>
@@ -28,11 +28,11 @@ const HTML = function(htmldata) {
         </main>
     </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    </html>`
-}
+    </html>`;
+};
 
 const generateManagercard = function (Manager) {
-    return `
+  return `
     <div class="col-4 mt-4">
         <div class="card h-100">
             <div class="card-header">
@@ -47,10 +47,10 @@ const generateManagercard = function (Manager) {
         </div>
     </div>
     `;
-}
+};
 
 const generateEngineercard = function (Engineer) {
-    return `
+  return `
 <div class="col-4 mt-4">
     <div class="card h-100">
         <div class="card-header">
@@ -64,10 +64,10 @@ const generateEngineercard = function (Engineer) {
         </div>
     </div>
 </div>`;
-}
+};
 
 const generateInterncard = function (Intern) {
-    return `
+  return `
 <div class="col-4 mt-4">
     <div class="card h-100">
         <div class="card-header">
@@ -81,40 +81,38 @@ const generateInterncard = function (Intern) {
         </div>
     </div>
 </div>`;
-}
+};
 
 generateHTML = (data) => {
+  cardsArray = [];
 
-    cardsArray = []; 
+  for (let i = 0; i < data.length; i++) {
+    const employee = data[i];
+    const role = employee.getRole();
 
-    for (let i = 0; i < data.length; i++) {
-        const employee = data[i];
-        const role = employee.getRole(); 
+    if (role === "Manager") {
+      const managerCard = generateManagercard(employee);
 
-        if (role === 'Manager') {
-            const managerCard = generateManagercard(employee);
-
-            pageArray.push(managerCard);
-        }
-
-        if (role === 'Engineer') {
-            const engineerCard = generateEngineercard(employee);
-
-            pageArray.push(engineerCard);
-        }
-
-        if (role === 'Intern') {
-            const internCard = generateInterncard(employee);
-
-            pageArray.push(internCard);
-        }
-        
+      cardsArray.push(managerCard);
     }
 
-    const employeeCards = pageArray.join('')
+    if (role === "Engineer") {
+      const engineerCard = generateEngineercard(employee);
 
-    const generateTeam = HTML(employeeCards); 
-    return generateTeam;
-}
+      cardsArray.push(engineerCard);
+    }
 
-module.exports = generateHTML; 
+    if (role === "Intern") {
+      const internCard = generateInterncard(employee);
+
+      cardsArray.push(internCard);
+    }
+  }
+
+  const employeeCards = cardsArray.join("");
+
+  const generateTeam = HTML(employeeCards);
+  return generateTeam;
+};
+
+module.exports = generateHTML;
