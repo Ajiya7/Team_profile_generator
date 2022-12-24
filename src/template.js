@@ -41,7 +41,7 @@ const generateManagercard = function (Manager) {
             </div>
             <div class="card-body">
                 <p class="id">ID: ${Manager.id}</p>
-                <p class="email">Email: ${Manager.email}
+                <p class="email">Email: <a href="mailto:${Manager.email}>${Manager.email}</a></p>
                 <p class="office">Office Number: ${Manager.officeNumber}</p>
             </div>
         </div>
@@ -59,8 +59,8 @@ const generateEngineercard = function (Engineer) {
         </div>
         <div class="card-body">
             <p class="id">ID: ${Engineer.id}</p>
-            <p class="email">Email: ${Engineer.email}
-            <p class="github">Github: ${Engineer.github}</p>
+            <p class="email">Email: <a href="mailto:${Engineer.email}>${Engineer.email}</a></p>
+            <p class="github">Github:<a href:" https://github.com/${Engineer.github}"> ${Engineer.github}</a></p>
         </div>
     </div>
 </div>`;
@@ -76,7 +76,7 @@ const generateInterncard = function (Intern) {
         </div>
         <div class="card-body">
             <p class="id">ID: ${Intern.id}</p>
-            <p class="email">Email: ${Intern.email}
+            <p class="email">Email: <a href="mailto:${Intern.email}>${Intern.email}</a></p>
             <p class="school">School: ${Intern.school}</p>
         </div>
     </div>
